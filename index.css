@@ -11,16 +11,16 @@
   .navbar a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: #9c9c9c;
     text-align: center;
+    text-decoration: underline;
     padding: 14px 16px;
     text-decoration: none;
   }
   
   /* Change background on mouse-over */
   .navbar a:hover {
-    background: #ddd;
-    color: black;
+    color: rgb(255, 255, 255);
   }
   
   /* Main content */
