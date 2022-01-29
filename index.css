@@ -5,11 +5,11 @@
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
-    float: right;
   }
   
   /* Links inside the navbar */
   .navbar a {
+    float: right;
     display: block;
     color: #9c9c9c;
     text-align: left;
