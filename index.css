@@ -15,6 +15,7 @@ body {
   .navbar a {
     float: right;
     display: block;
+    font-family: Exo;
     color: #9c9c9c;
     text-align: left;
     padding: 14px 16px;
