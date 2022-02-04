@@ -36,7 +36,7 @@ body {
     position: absolute;
     right: 0;
     width: 100%;
-    min-height: 100vh;
+    height: 80%;
     padding: 1em;
     display: flex;
     justify-content: space-between;
