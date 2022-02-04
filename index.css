@@ -30,4 +30,18 @@ body {
   /* Main content */
   .main {
     margin-top: 30px; /* Add a top margin to avoid content overlay */
+    
+  }
+  .main video {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    transition: all 0.3s ease;
+    z-index: 2;
   }
