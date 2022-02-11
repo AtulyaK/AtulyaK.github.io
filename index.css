@@ -46,14 +46,13 @@ body {
   }
   .text {
     position: relative;
-    z-index: 7;
+    z-index: 10;
   }
   .text h2 {
     color: #fff;
     font-size: 2rem;
     font-weight: 700;
     line-height: 1em;
-    position: relative;
   }
   
   .text h3 {
@@ -61,7 +60,6 @@ body {
     font-weight: 700;
     color: #fff;
     line-height: 1em;
-    position: relative;
   }
   
   .text p {
@@ -69,5 +67,4 @@ body {
     color: #fff;
     margin: 1.25em 0;
     font-weight: 400;
-    position: relative;
   }
