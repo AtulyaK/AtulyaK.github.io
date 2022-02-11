@@ -43,3 +43,23 @@ body {
     transition: all 0.3s ease;
     z-index: 1;
   }
+  .text h2 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1em;
+  }
+  
+  .text h3 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1em;
+  }
+  
+  .text p {
+    font-size: 1.1em;
+    color: #fff;
+    margin: 1.25em 0;
+    font-weight: 400;
+  }
