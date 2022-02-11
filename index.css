@@ -41,7 +41,7 @@ body {
     align-items: center;
     background: #111;
     transition: all 0.3s ease;
-    
+    position:relative;
     z-index: 0;
   }
   .text h2 {
@@ -50,7 +50,7 @@ body {
     font-weight: 700;
     line-height: 1em;
     z-index:1;
-    
+    position:absolute;
   }
   
   .text h3 {
@@ -59,7 +59,7 @@ body {
     color: #fff;
     line-height: 1em;
     z-index:1;
-    
+    position:absolute;
   }
   
   .text p {
@@ -68,5 +68,5 @@ body {
     margin: 1.25em 0;
     font-weight: 400;
     z-index:1;
-    
+    position:absolute;
   }
