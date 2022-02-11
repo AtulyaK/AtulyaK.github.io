@@ -46,7 +46,7 @@ body {
   }
   .text {
     position: relative;
-    z-index: 10;
+    z-index: 7;
   }
   .text h2 {
     color: #fff;
