@@ -42,14 +42,17 @@ body {
     background: #111;
     transition: all 0.3s ease;
     position: absolute;
-    z-index: 0;
+    z-index: 1;
+  }
+  .text {
+    position: relative;
+    z-index: 10;
   }
   .text h2 {
     color: #fff;
     font-size: 2rem;
     font-weight: 700;
     line-height: 1em;
-    z-index:1;
     position: relative;
   }
   
@@ -58,7 +61,6 @@ body {
     font-weight: 700;
     color: #fff;
     line-height: 1em;
-    z-index:1;
     position: relative;
   }
   
@@ -67,6 +69,5 @@ body {
     color: #fff;
     margin: 1.25em 0;
     font-weight: 400;
-    z-index:1;
     position: relative;
   }
