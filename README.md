@@ -14,4 +14,4 @@ Current Updates Section
 -   Place words better.
 -   Understand the JQuery for the inspiration
 -   make the barebones of the gallery
-Next Planned session: 2/11/2022
+   Next Planned session: 2/11/2022
