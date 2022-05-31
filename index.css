@@ -38,6 +38,7 @@ body {
     border-radius: 50%;
     overflow: hidden;
     margin-top: -6px;
+    margin-left: 0 px
   }
   .text {
     position: relative;
