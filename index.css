@@ -32,6 +32,13 @@ body {
     margin-top: 30px; /* Add a top margin to avoid content overlay */
     
   }
+  .logo {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+  }
   .main iframe {
     position: static;
     right: 0;
