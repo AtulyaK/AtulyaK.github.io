@@ -6,7 +6,7 @@ body {
     overflow: hidden;
     background-color: rgb(100, 100, 100);
     position: sticky; /* Set the navbar to fixed position */
-    top: 25px; /* Position the navbar at the top of the page */
+    top: 5px; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
     padding-bottom: 10px;
   }
