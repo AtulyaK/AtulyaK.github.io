@@ -36,7 +36,7 @@ body {
     width: 46px;
     height: 46px;
     border-radius: 50%;
-    overflow: hidden;
+    /*overflow: hidden;*/
     margin-top: -6px;
     margin-left: 0 px
   }
@@ -65,10 +65,4 @@ body {
     font-weight: 400;
   }
 
-  div.homeimg { 
-    top: 500px; 
-    left: 0px; 
-    right: 205px; 
-    bottom: 0px; 
-    position: fixed; 
-  } 
+  
