@@ -64,3 +64,11 @@ body {
     margin: 1.25em 0;
     font-weight: 400;
   }
+
+  div.homeimg { 
+    top: 500px; 
+    left: 0px; 
+    right: 205px; 
+    bottom: 0px; 
+    position: fixed; 
+  } 
