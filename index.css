@@ -8,7 +8,7 @@ body {
     position: sticky; /* Set the navbar to fixed position */
     top: 5px; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
   }
   
   /* Links inside the navbar */
