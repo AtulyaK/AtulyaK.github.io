@@ -1,4 +1,22 @@
 * {
+    background-color: white;
+    color: black;
+}
+#logo {
+    max-width: 8%;
+    border-radius: 20%;
+}
+ul.navbar {
+    list-style: none;
+    padding: 0;
+    background-color: black;
+    color: antiquewhite;
+}
+ul.navbar * {
+    display: inline-block;
+    font-size: 23px;
+    margin-right: 20px;
+    vertical-align: middle;
     background-color: black;
     color: antiquewhite;
 }
