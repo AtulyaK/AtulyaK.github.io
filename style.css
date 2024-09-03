@@ -83,14 +83,15 @@ section h2 {
 /* Experience and Leadership Styles */
 /* Updated Grid Layout to ensure 3 cards per row */
 /* Responsive Grid Layout for Experience Cards */
+/* Responsive Grid Layout for Experience Cards */
 .experience-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive: 1 to 3 cards per row */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive: Adjusts between 1 to 3 cards per row */
     gap: 1.5em;
     margin-top: 1.5em;
 }
 
-/* Adjust card size and hover effects */
+/* Experience Card Styles */
 .experience-card {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -101,7 +102,7 @@ section h2 {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    height: 300px; /* Set a consistent height for all cards */
+    height: 300px; /* Consistent height */
 }
 
 /* Hover effects */
@@ -110,6 +111,7 @@ section h2 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Details section of each card */
 .experience-details {
     position: absolute;
     top: 0;
@@ -127,10 +129,39 @@ section h2 {
     max-height: 100%;
 }
 
-/* Show details on hover */
+/* Reveal details on hover */
 .experience-card:hover .experience-details {
     opacity: 1;
 }
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+    .experience-grid {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+
+    .experience-card {
+        height: auto; /* Adjust height for readability */
+        padding: 1em 0.5em; /* Slightly smaller padding for mobile */
+    }
+
+    .experience-details {
+        padding: 0.5em; /* Adjust padding for smaller screens */
+    }
+
+    header {
+        padding: 1em 0; /* Adjust header padding for mobile */
+    }
+
+    h2, h3 {
+        font-size: 1.4em; /* Slightly smaller font sizes for mobile readability */
+    }
+
+    ul {
+        padding-left: 15px; /* Slightly smaller padding for mobile */
+    }
+}
+
 
 
 .experience-card h3 {
