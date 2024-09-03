@@ -1,0 +1,151 @@
+/* General Styles (Element Selectors) */
+body {
+    font-family: Arial, sans-serif; /* Font styles */
+    line-height: 1.6;
+    background-color: #f9f9f9; /* Colors */
+    color: #333; /* Colors */
+    margin: 0; /* Margins */
+    padding: 0; /* Padding */
+}
+
+header {
+    background-color: #4CAF50; /* Colors */
+    color: white; /* Colors */
+    text-align: center;
+    padding: 1.5em 0; /* Padding */
+    margin-bottom: 2em; /* Margins */
+}
+
+/* Descendant Selectors */
+header h1 {
+    margin: 0; /* Margins */
+    font-size: 2.5em; /* Font sizes */
+}
+
+header h2 {
+    margin: 0.5em 0; /* Margins */
+    font-size: 1.5em; /* Font sizes */
+}
+
+/* Child Selectors */
+header > p {
+    margin: 0.5em 0; /* Margins */
+    font-size: 1em; /* Font sizes */
+}
+
+/* Section Styles (Class Selectors) */
+section {
+    margin: 2em; /* Margins */
+    padding: 1em; /* Padding */
+    background-color: white; /* Colors */
+    border-radius: 8px; /* Borders */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Borders */
+}
+
+/* Experience Grid and Card Styles (Class Selectors) */
+.experience-grid {
+    display: grid; /* Layout using Grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout using Grid */
+    gap: 1.5em; /* Margins */
+    margin-top: 1.5em; /* Margins */
+}
+
+.experience-card {
+    background-color: #fff; /* Colors */
+    border: 1px solid #ddd; /* Borders */
+    border-radius: 12px; /* Borders */
+    padding: 1em; /* Padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Borders */
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden; /* Ensures content doesn't overflow */
+    height: 300px; /* Fixed size to create equal-sized cards */
+    cursor: pointer;
+}
+
+/* Pseudo-class Selectors */
+.experience-card:hover {
+    transform: translateY(-10px); /* Creates a hover effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Creates a hover effect */
+}
+
+.experience-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.95); /* Colors */
+    padding: 1em; /* Padding */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column; /* Layout */
+    justify-content: start; /* Layout */
+    overflow-y: auto; /* Makes content scrollable */
+    max-height: 100%; /* Ensures the content fits within the card */
+}
+
+/* Reveal details on hover (Pseudo-class Selectors) */
+.experience-card:hover .experience-details {
+    opacity: 1; /* Shows content on hover */
+}
+
+/* Scrollbar styling for experience details */
+.experience-details::-webkit-scrollbar {
+    width: 8px;
+}
+
+.experience-details::-webkit-scrollbar-thumb {
+    background-color: #4CAF50; /* Colors */
+    border-radius: 10px; /* Borders */
+}
+
+/* Font Styles and Sizes */
+h2 {
+    font-size: 1.8em; /* Font sizes */
+    color: #333; /* Colors */
+    margin-bottom: 0.5em; /* Margins */
+    border-bottom: 2px solid #4CAF50; /* Borders */
+    padding-bottom: 0.2em; /* Padding */
+}
+
+h3 {
+    font-size: 1.5em; /* Font sizes */
+    color: #555; /* Colors */
+    margin-top: 0; /* Margins */
+}
+
+ul {
+    list-style-type: disc;
+    margin: 0; /* Margins */
+    padding-left: 20px; /* Padding */
+}
+
+/* Link Styles (Element Selectors and Pseudo-class Selectors) */
+a {
+    color: white; /* Colors */
+    text-decoration: none; /* Text styling */
+}
+
+a:hover {
+    text-decoration: underline; /* Hover effect for links */
+}
+
+/* Responsive Layout (Media Query for Flexbox) */
+@media (min-width: 768px) {
+    section {
+        max-width: 800px; /* Layout */
+        margin: 2em auto; /* Centering content */
+    }
+
+    header {
+        display: flex; /* Layout using Flexbox */
+        flex-direction: column; /* Layout using Flexbox */
+        align-items: center; /* Center content */
+    }
+
+    header > p {
+        order: 2; /* Child selectors to control layout */
+    }
+}
