@@ -81,12 +81,10 @@ section h2 {
 }
 
 /* Experience and Leadership Styles */
-/* Updated Grid Layout to ensure 3 cards per row */
-/* Responsive Grid Layout for Experience Cards */
 /* Responsive Grid Layout for Experience Cards */
 .experience-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive: Adjusts between 1 to 3 cards per row */
+    grid-template-columns: repeat(3, 1fr); /* Default to 3 columns on larger screens */
     gap: 1.5em;
     margin-top: 1.5em;
 }
@@ -100,38 +98,26 @@ section h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
-    overflow: hidden;
     cursor: pointer;
-    height: 300px; /* Consistent height */
+    overflow: hidden;
+    height: auto; /* Adjust height based on content */
 }
 
-/* Hover effects */
+/* Hover effect for desktop, does not reveal content */
 .experience-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow to highlight card */
 }
 
-/* Details section of each card */
+/* Experience Details Styling */
 .experience-details {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.95);
+    position: relative; /* Standard positioning, no hover effects */
     padding: 1em;
-    opacity: 0;
-    transition: opacity 0.3s;
     display: flex;
     flex-direction: column;
     justify-content: start;
     overflow-y: auto;
-    max-height: 100%;
-}
-
-/* Reveal details on hover */
-.experience-card:hover .experience-details {
-    opacity: 1;
+    max-height: none; /* Always visible on mobile */
 }
 
 /* Media Query for Mobile Devices */
@@ -141,28 +127,16 @@ section h2 {
     }
 
     .experience-card {
-        height: auto; /* Adjust height for readability */
-        padding: 1em 0.5em; /* Slightly smaller padding for mobile */
+        height: auto; /* Adjust to content height on mobile */
+        padding: 1em; /* Standard padding */
     }
 
-    .experience-details {
-        padding: 0.5em; /* Adjust padding for smaller screens */
-    }
-
-    header {
-        padding: 1em 0; /* Adjust header padding for mobile */
-    }
-
-    h2, h3 {
-        font-size: 1.4em; /* Slightly smaller font sizes for mobile readability */
-    }
-
-    ul {
-        padding-left: 15px; /* Slightly smaller padding for mobile */
+    /* Disable hover effect on mobile */
+    .experience-card:hover {
+        transform: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow */
     }
 }
-
-
 
 .experience-card h3 {
     color: #C28E0E;
