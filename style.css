@@ -14,6 +14,9 @@ header {
     text-align: center;
     padding: 1.5em 0; /* Padding */
     margin-bottom: 2em; /* Margins */
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Layout */
+    align-items: center; /* Center content */
 }
 
 /* Descendant Selectors */
@@ -35,17 +38,18 @@ header > p {
 
 /* Section Styles (Class Selectors) */
 section {
-    margin: 2em; /* Margins */
+    margin: 2em auto; /* Margins */
     padding: 1em; /* Padding */
     background-color: white; /* Colors */
     border-radius: 8px; /* Borders */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Borders */
+    max-width: 800px; /* Max width for readability */
 }
 
 /* Experience Grid and Card Styles (Class Selectors) */
 .experience-grid {
     display: grid; /* Layout using Grid */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout using Grid */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjust for better responsiveness */
     gap: 1.5em; /* Margins */
     margin-top: 1.5em; /* Margins */
 }
@@ -59,7 +63,7 @@ section {
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
     overflow: hidden; /* Ensures content doesn't overflow */
-    height: 300px; /* Fixed size to create equal-sized cards */
+    height: 350px; /* Increase fixed size to create equal-sized cards */
     cursor: pointer;
 }
 
@@ -134,18 +138,14 @@ a:hover {
 
 /* Responsive Layout (Media Query for Flexbox) */
 @media (min-width: 768px) {
-    section {
-        max-width: 800px; /* Layout */
-        margin: 2em auto; /* Centering content */
-    }
-
     header {
-        display: flex; /* Layout using Flexbox */
-        flex-direction: column; /* Layout using Flexbox */
-        align-items: center; /* Center content */
+        flex-direction: row; /* Layout using Flexbox */
+        justify-content: space-between; /* Aligns items in header */
+        max-width: 100%; /* Max width for header */
     }
 
     header > p {
         order: 2; /* Child selectors to control layout */
+        margin-top: 0; /* Margin reset */
     }
 }
