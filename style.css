@@ -82,26 +82,56 @@ section h2 {
 
 /* Experience and Leadership Styles */
 /* Updated Grid Layout to ensure 3 cards per row */
+/* Responsive Grid Layout for Experience Cards */
 .experience-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive: 1 to 3 cards per row */
     gap: 1.5em;
     margin-top: 1.5em;
 }
 
-
+/* Adjust card size and hover effects */
 .experience-card {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    height: 300px; /* Set a consistent height for all cards */
 }
 
+/* Hover effects */
 .experience-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+.experience-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 1em;
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+/* Show details on hover */
+.experience-card:hover .experience-details {
+    opacity: 1;
+}
+
 
 .experience-card h3 {
     color: #C28E0E;
@@ -121,12 +151,13 @@ section h2 {
 }
 
 #skills li {
-    background-color: #C28E0E;
+    background-color: white;
     color: black;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
     display: inline-block;
+    font-size: 16px;
 }
 
 /* Footer Styles */
