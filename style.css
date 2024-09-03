@@ -1,151 +1,124 @@
-/* General Styles (Element Selectors) */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styles */
 body {
-    font-family: Arial, sans-serif; /* Font styles */
+    background-color: #f4f4f4;
+    color: #333;
     line-height: 1.6;
-    background-color: #f9f9f9; /* Colors */
-    color: #333; /* Colors */
-    margin: 0; /* Margins */
-    padding: 0; /* Padding */
+    padding: 20px;
 }
 
+/* Header Styles */
 header {
-    background-color: #4CAF50; /* Colors */
-    color: white; /* Colors */
+    background-color: #0066cc;
+    color: white;
     text-align: center;
-    padding: 1.5em 0; /* Padding */
-    margin-bottom: 2em; /* Margins */
-    display: flex; /* Use Flexbox */
-    flex-direction: column; /* Layout */
-    align-items: center; /* Center content */
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
 }
 
-/* Descendant Selectors */
 header h1 {
-    margin: 0; /* Margins */
-    font-size: 2.5em; /* Font sizes */
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
 header h2 {
-    margin: 0.5em 0; /* Margins */
-    font-size: 1.5em; /* Font sizes */
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
-/* Child Selectors */
-header > p {
-    margin: 0.5em 0; /* Margins */
-    font-size: 1em; /* Font sizes */
+header p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
-/* Section Styles (Class Selectors) */
+header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 8px 16px;
+    background-color: #004a99;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header a:hover {
+    background-color: #003366;
+}
+
+/* Section Styles */
 section {
-    margin: 2em auto; /* Margins */
-    padding: 1em; /* Padding */
-    background-color: white; /* Colors */
-    border-radius: 8px; /* Borders */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Borders */
-    max-width: 800px; /* Max width for readability */
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Experience Grid and Card Styles (Class Selectors) */
+section h2 {
+    color: #0066cc;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+}
+
+/* Experience and Leadership Styles */
 .experience-grid {
-    display: grid; /* Layout using Grid */
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjust for better responsiveness */
-    gap: 1.5em; /* Margins */
-    margin-top: 1.5em; /* Margins */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .experience-card {
-    background-color: #fff; /* Colors */
-    border: 1px solid #ddd; /* Borders */
-    border-radius: 12px; /* Borders */
-    padding: 1em; /* Padding */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Borders */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-    overflow: hidden; /* Ensures content doesn't overflow */
-    height: 350px; /* Increase fixed size to create equal-sized cards */
-    cursor: pointer;
 }
 
-/* Pseudo-class Selectors */
 .experience-card:hover {
-    transform: translateY(-10px); /* Creates a hover effect */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Creates a hover effect */
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.experience-details {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.95); /* Colors */
-    padding: 1em; /* Padding */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s;
-    display: flex;
-    flex-direction: column; /* Layout */
-    justify-content: start; /* Layout */
-    overflow-y: auto; /* Makes content scrollable */
-    max-height: 100%; /* Ensures the content fits within the card */
+.experience-card h3 {
+    color: #0066cc;
+    margin-bottom: 10px;
 }
 
-/* Reveal details on hover (Pseudo-class Selectors) */
-.experience-card:hover .experience-details {
-    opacity: 1; /* Shows content on hover */
-}
-
-/* Scrollbar styling for experience details */
-.experience-details::-webkit-scrollbar {
-    width: 8px;
-}
-
-.experience-details::-webkit-scrollbar-thumb {
-    background-color: #4CAF50; /* Colors */
-    border-radius: 10px; /* Borders */
-}
-
-/* Font Styles and Sizes */
-h2 {
-    font-size: 1.8em; /* Font sizes */
-    color: #333; /* Colors */
-    margin-bottom: 0.5em; /* Margins */
-    border-bottom: 2px solid #4CAF50; /* Borders */
-    padding-bottom: 0.2em; /* Padding */
-}
-
-h3 {
-    font-size: 1.5em; /* Font sizes */
-    color: #555; /* Colors */
-    margin-top: 0; /* Margins */
-}
-
-ul {
+.experience-card ul {
+    margin-top: 10px;
     list-style-type: disc;
-    margin: 0; /* Margins */
-    padding-left: 20px; /* Padding */
+    padding-left: 20px;
 }
 
-/* Link Styles (Element Selectors and Pseudo-class Selectors) */
-a {
-    color: white; /* Colors */
-    text-decoration: none; /* Text styling */
+/* Skills Section */
+#skills ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-a:hover {
-    text-decoration: underline; /* Hover effect for links */
+#skills li {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: inline-block;
 }
 
-/* Responsive Layout (Media Query for Flexbox) */
-@media (min-width: 768px) {
-    header {
-        flex-direction: row; /* Layout using Flexbox */
-        justify-content: space-between; /* Aligns items in header */
-        max-width: 100%; /* Max width for header */
-    }
-
-    header > p {
-        order: 2; /* Child selectors to control layout */
-        margin-top: 0; /* Margin reset */
-    }
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
 }
